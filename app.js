@@ -29,7 +29,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // // Set security HTTP headers
-// app.use(helmet({ contentSecurityPolicy: false }));
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({ origin: true, credentials: true }));
 
 // Deveopment logging
@@ -55,7 +55,7 @@ app.use(cookieParser());
 app.use(mongoSanitize());
 
 // Data sanitization against cross side scripting attacks(XSS)
-// app.use(xss());
+app.use(xss());
 
 // Test middlewares
 app.use(compression());
