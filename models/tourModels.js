@@ -152,10 +152,10 @@ tourSchema.pre('save', function (next) {
 //   next();
 // });
 
-tourSchema.post('save', function (doc, next) {
-  console.log('Post save hook : Document Middleware');
-  next();
-});
+// tourSchema.post('save', function (doc, next) {
+//   console.log('Post save hook : Document Middleware');
+//   next();
+// });
 
 //QUERY MIDDLEWARE
 tourSchema.pre(/^find/, function (next) {
@@ -175,8 +175,8 @@ tourSchema.pre(/^find/, function (next) {
 
 tourSchema.post(/^find/, function (docs, next) {
   this.find({ secretTour: { $ne: true } });
-  this.timeTaken = Date.now() - this.startTime;
-  console.log(`Query Took = ${this.timeTaken} milliseconds`);
+  // this.timeTaken = Date.now() - this.startTime;
+  // console.log(`Query Took = ${this.timeTaken} milliseconds`);
   next();
 });
 
