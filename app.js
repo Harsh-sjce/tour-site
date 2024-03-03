@@ -32,8 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({ origin: true, credentials: true }));
 
-app.options('*', cors());
-
 // Deveopment logging
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
