@@ -3,7 +3,7 @@ import '@babel/polyfill';
 import { login, logout } from './login';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripe';
-import { showAlert } from './alert';
+// import { showAlert } from './alert';
 
 // DOM ELEMENTS
 const loginForm = document.querySelector('.form--login');
@@ -60,6 +60,6 @@ if (bookBtn)
     bookTour(tourId);
   });
 
-const alertMessage = document.querySelector('body').dataset.alert;
+// const alertMessage = document.querySelector('body').dataset.alert;
 
-if (alertMessage) showAlert('success', alertMessage, 20);
+// if (alertMessage) showAlert('success', alertMessage, 20);

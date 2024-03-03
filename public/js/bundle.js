@@ -12941,10 +12941,9 @@ parcelRequire = (function (e, r, t, n) {
           require('regenerator-runtime/runtime.js');
         var e = require('./login'),
           r = require('./updateSettings'),
-          t = require('./stripe'),
-          s = require('./alert');
-        function o(e) {
-          return (o =
+          t = require('./stripe');
+        function s(e) {
+          return (s =
             'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -12958,14 +12957,14 @@ parcelRequire = (function (e, r, t, n) {
                     : typeof e;
                 })(e);
         }
-        function n() {
-          n = function () {
+        function o() {
+          o = function () {
             return r;
           };
           var e,
             r = {},
             t = Object.prototype,
-            s = t.hasOwnProperty,
+            n = t.hasOwnProperty,
             u =
               Object.defineProperty ||
               function (e, r, t) {
@@ -12994,7 +12993,7 @@ parcelRequire = (function (e, r, t, n) {
             };
           }
           function j(e, r, t, s) {
-            var o = r && r.prototype instanceof g ? r : g,
+            var o = r && r.prototype instanceof q ? r : q,
               n = Object.create(o.prototype),
               i = new P(s || []);
             return u(n, '_invoke', { value: _(e, t, i) }), n;
@@ -13011,8 +13010,8 @@ parcelRequire = (function (e, r, t, n) {
             p = 'suspendedYield',
             h = 'executing',
             y = 'completed',
-            q = {};
-          function g() {}
+            g = {};
+          function q() {}
           function v() {}
           function b() {}
           var w = {};
@@ -13021,8 +13020,8 @@ parcelRequire = (function (e, r, t, n) {
           });
           var x = Object.getPrototypeOf,
             E = x && x(x(G([])));
-          E && E !== t && s.call(E, c) && (w = E);
-          var L = (b.prototype = g.prototype = Object.create(w));
+          E && E !== t && n.call(E, c) && (w = E);
+          var L = (b.prototype = q.prototype = Object.create(w));
           function k(e) {
             ['next', 'throw', 'return'].forEach(function (r) {
               d(e, r, function (e) {
@@ -13031,12 +13030,12 @@ parcelRequire = (function (e, r, t, n) {
             });
           }
           function S(e, r) {
-            function t(n, u, i, c) {
-              var a = m(e[n], e, u);
+            function t(o, u, i, c) {
+              var a = m(e[o], e, u);
               if ('throw' !== a.type) {
                 var l = a.arg,
                   d = l.value;
-                return d && 'object' == o(d) && s.call(d, '__await')
+                return d && 'object' == s(d) && n.call(d, '__await')
                   ? r.resolve(d.__await).then(
                       function (e) {
                         t('next', e, i, c);
@@ -13056,15 +13055,15 @@ parcelRequire = (function (e, r, t, n) {
               }
               c(a.arg);
             }
-            var n;
+            var o;
             u(this, '_invoke', {
               value: function (e, s) {
-                function o() {
+                function n() {
                   return new r(function (r, o) {
                     t(e, s, r, o);
                   });
                 }
-                return (n = n ? n.then(o, o) : o());
+                return (o = o ? o.then(n, n) : n());
               },
             });
           }
@@ -13081,7 +13080,7 @@ parcelRequire = (function (e, r, t, n) {
                 if (i) {
                   var c = I(i, s);
                   if (c) {
-                    if (c === q) continue;
+                    if (c === g) continue;
                     return c;
                   }
                 }
@@ -13093,7 +13092,7 @@ parcelRequire = (function (e, r, t, n) {
                 o = h;
                 var a = m(r, t, s);
                 if ('normal' === a.type) {
-                  if (((o = s.done ? y : p), a.arg === q)) continue;
+                  if (((o = s.done ? y : p), a.arg === g)) continue;
                   return { value: a.arg, done: s.done };
                 }
                 'throw' === a.type &&
@@ -13118,12 +13117,12 @@ parcelRequire = (function (e, r, t, n) {
                     (t.arg = new TypeError(
                       "The iterator does not provide a '" + s + "' method",
                     )))),
-                q
+                g
               );
             var n = m(o, r.iterator, t.arg);
             if ('throw' === n.type)
               return (
-                (t.method = 'throw'), (t.arg = n.arg), (t.delegate = null), q
+                (t.method = 'throw'), (t.arg = n.arg), (t.delegate = null), g
               );
             var u = n.arg;
             return u
@@ -13132,12 +13131,12 @@ parcelRequire = (function (e, r, t, n) {
                   (t.next = r.nextLoc),
                   'return' !== t.method && ((t.method = 'next'), (t.arg = e)),
                   (t.delegate = null),
-                  q)
+                  g)
                 : u
               : ((t.method = 'throw'),
                 (t.arg = new TypeError('iterator result is not an object')),
                 (t.delegate = null),
-                q);
+                g);
           }
           function O(e) {
             var r = { tryLoc: e[0] };
@@ -13160,17 +13159,17 @@ parcelRequire = (function (e, r, t, n) {
               if (t) return t.call(r);
               if ('function' == typeof r.next) return r;
               if (!isNaN(r.length)) {
-                var n = -1,
+                var o = -1,
                   u = function t() {
-                    for (; ++n < r.length; )
-                      if (s.call(r, n))
-                        return (t.value = r[n]), (t.done = !1), t;
+                    for (; ++o < r.length; )
+                      if (n.call(r, o))
+                        return (t.value = r[o]), (t.done = !1), t;
                     return (t.value = e), (t.done = !0), t;
                   };
                 return (u.next = u);
               }
             }
-            throw new TypeError(o(r) + ' is not iterable');
+            throw new TypeError(s(r) + ' is not iterable');
           }
           return (
             (v.prototype = b),
@@ -13250,7 +13249,7 @@ parcelRequire = (function (e, r, t, n) {
                 )
                   for (var t in this)
                     't' === t.charAt(0) &&
-                      s.call(this, t) &&
+                      n.call(this, t) &&
                       !isNaN(+t.slice(1)) &&
                       (this[t] = e);
               },
@@ -13263,7 +13262,7 @@ parcelRequire = (function (e, r, t, n) {
               dispatchException: function (r) {
                 if (this.done) throw r;
                 var t = this;
-                function o(s, o) {
+                function s(s, o) {
                   return (
                     (i.type = 'throw'),
                     (i.arg = r),
@@ -13272,51 +13271,51 @@ parcelRequire = (function (e, r, t, n) {
                     !!o
                   );
                 }
-                for (var n = this.tryEntries.length - 1; n >= 0; --n) {
-                  var u = this.tryEntries[n],
+                for (var o = this.tryEntries.length - 1; o >= 0; --o) {
+                  var u = this.tryEntries[o],
                     i = u.completion;
-                  if ('root' === u.tryLoc) return o('end');
+                  if ('root' === u.tryLoc) return s('end');
                   if (u.tryLoc <= this.prev) {
-                    var c = s.call(u, 'catchLoc'),
-                      a = s.call(u, 'finallyLoc');
+                    var c = n.call(u, 'catchLoc'),
+                      a = n.call(u, 'finallyLoc');
                     if (c && a) {
-                      if (this.prev < u.catchLoc) return o(u.catchLoc, !0);
-                      if (this.prev < u.finallyLoc) return o(u.finallyLoc);
+                      if (this.prev < u.catchLoc) return s(u.catchLoc, !0);
+                      if (this.prev < u.finallyLoc) return s(u.finallyLoc);
                     } else if (c) {
-                      if (this.prev < u.catchLoc) return o(u.catchLoc, !0);
+                      if (this.prev < u.catchLoc) return s(u.catchLoc, !0);
                     } else {
                       if (!a)
                         throw new Error(
                           'try statement without catch or finally',
                         );
-                      if (this.prev < u.finallyLoc) return o(u.finallyLoc);
+                      if (this.prev < u.finallyLoc) return s(u.finallyLoc);
                     }
                   }
                 }
               },
               abrupt: function (e, r) {
                 for (var t = this.tryEntries.length - 1; t >= 0; --t) {
-                  var o = this.tryEntries[t];
+                  var s = this.tryEntries[t];
                   if (
-                    o.tryLoc <= this.prev &&
-                    s.call(o, 'finallyLoc') &&
-                    this.prev < o.finallyLoc
+                    s.tryLoc <= this.prev &&
+                    n.call(s, 'finallyLoc') &&
+                    this.prev < s.finallyLoc
                   ) {
-                    var n = o;
+                    var o = s;
                     break;
                   }
                 }
-                n &&
+                o &&
                   ('break' === e || 'continue' === e) &&
-                  n.tryLoc <= r &&
-                  r <= n.finallyLoc &&
-                  (n = null);
-                var u = n ? n.completion : {};
+                  o.tryLoc <= r &&
+                  r <= o.finallyLoc &&
+                  (o = null);
+                var u = o ? o.completion : {};
                 return (
                   (u.type = e),
                   (u.arg = r),
-                  n
-                    ? ((this.method = 'next'), (this.next = n.finallyLoc), q)
+                  o
+                    ? ((this.method = 'next'), (this.next = o.finallyLoc), g)
                     : this.complete(u)
                 );
               },
@@ -13330,14 +13329,14 @@ parcelRequire = (function (e, r, t, n) {
                       (this.method = 'return'),
                       (this.next = 'end'))
                     : 'normal' === e.type && r && (this.next = r),
-                  q
+                  g
                 );
               },
               finish: function (e) {
                 for (var r = this.tryEntries.length - 1; r >= 0; --r) {
                   var t = this.tryEntries[r];
                   if (t.finallyLoc === e)
-                    return this.complete(t.completion, t.afterLoc), B(t), q;
+                    return this.complete(t.completion, t.afterLoc), B(t), g;
                 }
               },
               catch: function (e) {
@@ -13362,14 +13361,14 @@ parcelRequire = (function (e, r, t, n) {
                     nextLoc: s,
                   }),
                   'next' === this.method && (this.arg = e),
-                  q
+                  g
                 );
               },
             }),
             r
           );
         }
-        function u(e, r, t, s, o, n, u) {
+        function n(e, r, t, s, o, n, u) {
           try {
             var i = e[n](u),
               c = i.value;
@@ -13378,37 +13377,37 @@ parcelRequire = (function (e, r, t, n) {
           }
           i.done ? r(c) : Promise.resolve(c).then(s, o);
         }
-        function i(e) {
+        function u(e) {
           return function () {
             var r = this,
               t = arguments;
             return new Promise(function (s, o) {
-              var n = e.apply(r, t);
+              var u = e.apply(r, t);
               function i(e) {
-                u(n, s, o, i, c, 'next', e);
+                n(u, s, o, i, c, 'next', e);
               }
               function c(e) {
-                u(n, s, o, i, c, 'throw', e);
+                n(u, s, o, i, c, 'throw', e);
               }
               i(void 0);
             });
           };
         }
-        var c = document.querySelector('.form--login'),
-          a = document.querySelector('.nav__el--logout'),
-          l = document.querySelector('.form-user-data'),
-          d = document.querySelector('.form-user-password'),
-          j = document.getElementById('book-tour');
-        c &&
-          c.addEventListener('submit', function (r) {
+        var i = document.querySelector('.form--login'),
+          c = document.querySelector('.nav__el--logout'),
+          a = document.querySelector('.form-user-data'),
+          l = document.querySelector('.form-user-password'),
+          d = document.getElementById('book-tour');
+        i &&
+          i.addEventListener('submit', function (r) {
             r.preventDefault();
             var t = document.getElementById('email').value,
               s = document.getElementById('password').value;
             (0, e.login)(t, s);
           }),
-          a && a.addEventListener('click', e.logout),
-          l &&
-            l.addEventListener('submit', function (e) {
+          c && c.addEventListener('click', e.logout),
+          a &&
+            a.addEventListener('submit', function (e) {
               e.preventDefault();
               var t = new FormData();
               t.append('name', document.getElementById('name').value),
@@ -13416,14 +13415,14 @@ parcelRequire = (function (e, r, t, n) {
                 t.append('photo', document.getElementById('photo').files[0]),
                 (0, r.updateSettings)(t, 'data');
             }),
-          d &&
-            d.addEventListener(
+          l &&
+            l.addEventListener(
               'submit',
               (function () {
-                var e = i(
-                  n().mark(function e(t) {
-                    var s, o, u;
-                    return n().wrap(function (e) {
+                var e = u(
+                  o().mark(function e(t) {
+                    var s, n, u;
+                    return o().wrap(function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
@@ -13436,7 +13435,7 @@ parcelRequire = (function (e, r, t, n) {
                                 document.getElementById(
                                   'password-current',
                                 ).value),
-                              (o = document.getElementById('password').value),
+                              (n = document.getElementById('password').value),
                               (u =
                                 document.getElementById(
                                   'password-confirm',
@@ -13445,7 +13444,7 @@ parcelRequire = (function (e, r, t, n) {
                               (0, r.updateSettings)(
                                 {
                                   passwordCurrent: s,
-                                  password: o,
+                                  password: n,
                                   passwordConfirm: u,
                                 },
                                 'password',
@@ -13474,14 +13473,12 @@ parcelRequire = (function (e, r, t, n) {
                 };
               })(),
             ),
-          j &&
-            j.addEventListener('click', function (e) {
+          d &&
+            d.addEventListener('click', function (e) {
               e.target.textContent = 'Processing...';
               var r = e.target.dataset.tourId;
               (0, t.bookTour)(r);
             });
-        var m = document.querySelector('body').dataset.alert;
-        alert && (0, s.showAlert)('success', m, 20);
       },
       {
         'core-js/modules/es6.array.copy-within.js': 'c9DC',
@@ -13617,7 +13614,6 @@ parcelRequire = (function (e, r, t, n) {
         './login': 'mnjM',
         './updateSettings': 'FxPS',
         './stripe': 'Uj2q',
-        './alert': 'acK6',
       },
     ],
   },
