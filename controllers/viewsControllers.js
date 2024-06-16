@@ -13,6 +13,12 @@ const AppError = require('../utils/appError');
 //   next();
 // };
 
+exports.getSignupForm = (req, res) => {
+  res.status(200).render('signup', {
+    title: 'Create your account',
+  });
+};
+
 exports.getOverview = catchAsync(async (req, res, next) => {
   // 1.) Get tour data from collection
   const tours = await Tour.find();
